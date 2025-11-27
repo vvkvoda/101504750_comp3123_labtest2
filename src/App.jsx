@@ -3,7 +3,7 @@ import axios from 'axios';
 import WeatherCard from './WeatherCard';
 import './App.css';
 
-// ✅ YOUR FINALIZED API KEY
+
 const API_KEY = '137ad180b7aefc5eb064fe61db2045bd'; 
 const ICON_URL_BASE = 'http://openweathermap.org/img/wn/';
 
@@ -42,18 +42,17 @@ function App() {
     }
   };
 
-  // useEffect hook to fetch data on initial load and when 'city' changes
+  
   useEffect(() => {
     if (city) {
       fetchWeather(city);
     }
   }, [city]);
 
-  // Handle form submission (The Search dynamic content change feature)
   const handleSubmit = (e) => {
     e.preventDefault();
     if (inputCity.trim() !== '') {
-      setCity(inputCity.trim()); // Trigger useEffect to fetch new data
+      setCity(inputCity.trim()); 
     }
   };
 
